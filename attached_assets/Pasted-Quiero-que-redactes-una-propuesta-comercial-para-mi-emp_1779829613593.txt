@@ -1,0 +1,28 @@
+Quiero que redactes una propuesta comercial para mi empresa de soluciones con Inteligencia Artificial llamada [Nombre de la empresa].  
+
+### Propuesta de valor
+Destaca que ayudamos a negocios a **vender más y trabajar menos** usando IA accesible y personalizada.  
+El mensaje central debe ser: **“Al aplicar nuestras soluciones, tu negocio genera más dinero con menos esfuerzo.”**
+
+### Servicios (ordenados de menor a mayor impacto)
+1. **Scripts y guiones para video con IA** – contenido rápido y económico.  
+2. **Generación de contenido con IA** – posts, blogs y newsletters.  
+3. **Chatbot de Ventas con IA** – atención automática en WhatsApp y web.  
+4. **Lead Scoring con IA** – clasificación automática de prospectos en el CRM.  
+5. **Seguimiento automático de clientes** – mensajes post‑venta y nurturing.  
+6. **Dashboards con IA** – reportes claros en lenguaje natural.  
+7. **Automatización de procesos** – cotizaciones, reportes y flujos internos.  
+8. **CRM personalizado con IA** – sistema completo con predicciones y sugerencias.  
+
+### Enfoque en ingresos
+Explica cómo cada servicio contribuye a **aumentar ventas, mejorar retención y reducir costos**.  
+Ejemplo: *“El chatbot convierte conversaciones en reservas; el lead scoring asegura que tu equipo atienda primero a los clientes con mayor probabilidad de compra; el CRM con IA predice ingresos futuros.”*
+
+### Testimonios (empresa ficticia Sandy Life)
+Incluye 2 testimonios breves:  
+- *“Gracias al chatbot y al lead scoring, en Sandy Life aumentamos nuestras reservas en un 35% en solo un mes.”*  
+- *“El CRM con IA nos permitió organizar clientes y detectar oportunidades que antes se nos escapaban. Ahora generamos más ingresos con menos esfuerzo.”*
+
+### Cierre
+Invita al lector a solicitar un **diagnóstico gratis de 30 minutos** para mostrar cómo estas soluciones pueden aplicarse en su negocio.  
+Usa un tono profesional pero cercano, con CTA claro: *“Reserva tu demo gratis y empieza a vender más con IA.”*

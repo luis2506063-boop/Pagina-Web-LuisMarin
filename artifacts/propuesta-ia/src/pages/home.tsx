@@ -151,7 +151,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="servicios" className="py-24 px-4 relative bg-sky-50">
+      <section id="servicios" className="py-24 px-4 relative bg-secondary/40">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Escalera de Soluciones IA</h2>

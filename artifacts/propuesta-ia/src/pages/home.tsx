@@ -50,6 +50,7 @@ export default function Home() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#servicios" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Servicios</a>
+              <a href="#proceso" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Proceso</a>
               <a href="#resultados" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Resultados</a>
               <a href="#testimonios" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Casos de Éxito</a>
               <Button className="rounded-full px-6 font-semibold" onClick={() => document.getElementById('contacto')?.scrollIntoView()}>
@@ -70,6 +71,7 @@ export default function Home() {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-background border-b border-border p-4 space-y-4">
             <a href="#servicios" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2 font-medium">Servicios</a>
+            <a href="#proceso" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2 font-medium">Proceso</a>
             <a href="#resultados" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2 font-medium">Resultados</a>
             <a href="#testimonios" onClick={() => setIsMobileMenuOpen(false)} className="block px-4 py-2 font-medium">Casos de Éxito</a>
             <Button className="w-full rounded-full" onClick={() => { setIsMobileMenuOpen(false); document.getElementById('contacto')?.scrollIntoView(); }}>
@@ -248,8 +250,148 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section id="proceso" className="py-24 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary mb-6">
+              Nuestro proceso
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Cómo trabajamos</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Implementamos Inteligencia Artificial con un proceso claro: detectar oportunidades, diseñar la solución, ponerla en marcha y mejorarla con datos reales.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {[
+              {
+                step: "Paso 1",
+                title: "Diagnóstico gratuito",
+                desc: "Analizamos el proceso actual de la empresa para detectar tareas repetitivas, cuellos de botella, oportunidades perdidas y áreas donde la IA puede generar resultados rápidos.",
+                short: "Identificamos dónde estás perdiendo tiempo, dinero y oportunidades para crear una estrategia clara de automatización.",
+                icon: BarChart3
+              },
+              {
+                step: "Paso 2",
+                title: "Diseño de la solución",
+                desc: "Diseñamos una solución personalizada basada en las necesidades reales del negocio: asistentes de IA, WhatsApp, seguimiento comercial, atención al cliente, CRM o integraciones.",
+                short: "Creamos una solución hecha a la medida de tu operación y objetivos.",
+                icon: BrainCircuit
+              },
+              {
+                step: "Paso 3",
+                title: "Implementación y capacitación",
+                desc: "Configuramos el sistema, conectamos las herramientas necesarias y capacitamos al equipo para que pueda aprovechar la solución desde el primer día.",
+                short: "Nos encargamos de la parte técnica para que tu equipo se enfoque en vender y crecer.",
+                icon: Zap
+              },
+              {
+                step: "Paso 4",
+                title: "Optimización continua",
+                desc: "Monitoreamos resultados, analizamos métricas y realizamos mejoras constantes para aumentar productividad, eficiencia y retorno de inversión.",
+                short: "La IA mejora continuamente conforme aprende de tu negocio.",
+                icon: TrendingUp
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 bg-card rounded-2xl border border-border shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <div className="p-3 rounded-xl bg-primary/10 text-primary">
+                    <item.icon className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-bold text-accent uppercase tracking-wider">{item.step}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                <p className="mt-5 pt-5 border-t border-border text-sm font-semibold text-foreground leading-relaxed">
+                  {item.short}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Expected Results */}
+      <section id="resultados" className="py-24 px-4 bg-secondary/40">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Resultados que puedes esperar</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Soluciones enfocadas en ventas, atención al cliente y automatización para generar impacto operativo desde las primeras semanas.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Más prospectos atendidos",
+                desc: "Atiende clientes 24/7 sin aumentar personal.",
+                icon: MessageSquare
+              },
+              {
+                title: "Menos tareas manuales",
+                desc: "Automatiza procesos repetitivos y ahorra tiempo.",
+                icon: Zap
+              },
+              {
+                title: "Respuestas más rápidas",
+                desc: "Reduce tiempos de atención y seguimiento.",
+                icon: PhoneCall
+              },
+              {
+                title: "Mayor productividad",
+                desc: "Tu equipo se enfoca en actividades que generan ingresos.",
+                icon: TrendingUp
+              },
+              {
+                title: "Mejor seguimiento comercial",
+                desc: "Ningún prospecto se queda sin respuesta.",
+                icon: CheckCircle2
+              },
+              {
+                title: "Escalabilidad",
+                desc: "Crece sin tener que aumentar la estructura al mismo ritmo.",
+                icon: Database
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.08 }}
+                className="p-6 bg-card rounded-2xl border border-border shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-12 rounded-3xl bg-foreground p-8 md:p-12 text-center shadow-xl">
+            <h3 className="text-3xl md:text-4xl font-bold text-background mb-5">
+              La IA no reemplaza a tu equipo. Multiplica su capacidad.
+            </h3>
+            <p className="text-lg md:text-xl text-background/80 max-w-3xl mx-auto leading-relaxed">
+              Ayudamos a empresas a vender más, responder más rápido y operar de forma más eficiente mediante soluciones de Inteligencia Artificial diseñadas para resultados reales.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* How it generates Revenue */}
-      <section id="resultados" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+      <section id="impacto" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[100px]" />
         
         <div className="container mx-auto max-w-5xl px-4 relative z-10">

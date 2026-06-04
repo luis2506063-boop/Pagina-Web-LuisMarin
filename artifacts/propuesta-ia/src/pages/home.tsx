@@ -19,23 +19,6 @@ import { Button } from '@/components/ui/button';
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 }
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background overflow-x-hidden selection:bg-primary/20 selection:text-primary">
       {/* Navbar */}
@@ -120,35 +103,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Problem / Reality */}
-      <section className="py-20 bg-secondary/50">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
-          >
-            <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-6">
-              El crecimiento no debería significar agotamiento
-            </motion.h2>
-            <motion.p variants={itemVariants} className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Como director o dueño, sabes que vender más normalmente implica contratar más personal, gastar más en herramientas y trabajar más horas. La IA cambia las reglas del juego.
-            </motion.p>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { title: "Atención Lenta", desc: "Pierdes ventas porque tu equipo no puede responder rápido 24/7." },
-                { title: "Leads Fríos", desc: "Tus vendedores pierden tiempo en prospectos que no están listos para comprar." },
-                { title: "Caos Interno", desc: "Reportes manuales y procesos repetitivos consumen tu energía creativa." }
-              ].map((item, i) => (
-                <motion.div key={i} variants={itemVariants} className="p-6 bg-background rounded-2xl border border-border shadow-sm">
-                  <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+      {/* How it generates Revenue */}
+      <section id="impacto" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[100px]" />
+        
+        <div className="container mx-auto max-w-5xl px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">El Motor de tu Crecimiento</h2>
+            <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
+              No vendemos tecnología, vendemos resultados. Así es como nuestras soluciones impactan tu cuenta bancaria.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Aumenta Ventas",
+                desc: "El chatbot convierte conversaciones nocturnas en reservas confirmadas mientras duermes.",
+                icon: TrendingUp
+              },
+              {
+                title: "Mejora Cierre",
+                desc: "El lead scoring asegura que tus mejores vendedores hablen con los prospectos más calientes.",
+                icon: CheckCircle2
+              },
+              {
+                title: "Reduce Costos",
+                desc: "El CRM y la automatización hacen el trabajo de 3 asistentes administrativos sin errores.",
+                icon: BarChart3
+              }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+                className="bg-black/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl"
+              >
+                <item.icon className="w-10 h-10 mb-6 text-white" />
+                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                <p className="text-primary-foreground/80 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -386,53 +384,6 @@ export default function Home() {
             <p className="text-lg md:text-xl text-background/80 max-w-3xl mx-auto leading-relaxed">
               Ayudamos a empresas a vender más, responder más rápido y operar de forma más eficiente mediante soluciones de Inteligencia Artificial diseñadas para resultados reales.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How it generates Revenue */}
-      <section id="impacto" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[100px]" />
-        
-        <div className="container mx-auto max-w-5xl px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">El Motor de tu Crecimiento</h2>
-            <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-              No vendemos tecnología, vendemos resultados. Así es como nuestras soluciones impactan tu cuenta bancaria.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Aumenta Ventas",
-                desc: "El chatbot convierte conversaciones nocturnas en reservas confirmadas mientras duermes.",
-                icon: TrendingUp
-              },
-              {
-                title: "Mejora Cierre",
-                desc: "El lead scoring asegura que tus mejores vendedores hablen con los prospectos más calientes.",
-                icon: CheckCircle2
-              },
-              {
-                title: "Reduce Costos",
-                desc: "El CRM y la automatización hacen el trabajo de 3 asistentes administrativos sin errores.",
-                icon: BarChart3
-              }
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-                className="bg-black/10 backdrop-blur-sm border border-white/10 p-8 rounded-3xl"
-              >
-                <item.icon className="w-10 h-10 mb-6 text-white" />
-                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
-                <p className="text-primary-foreground/80 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

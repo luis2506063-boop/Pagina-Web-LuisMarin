@@ -170,51 +170,51 @@ export default function Home() {
               {[
                 {
                   icon: MessageSquare,
-                  title: "Scripts y Guiones para Video",
-                  desc: "Contenido rápido y económico. Convierte ideas en guiones magnéticos listos para grabar.",
-                  level: "Impacto Rápido"
+                  title: "Calificación de Leads con IA",
+                  desc: "La IA analiza cada prospecto, le asigna una puntuación y lo prioriza automáticamente. Tu equipo solo habla con quien tiene potencial real de compra.",
+                  level: "Más ventas"
                 },
                 {
                   icon: Bot,
-                  title: "Generación de Contenido",
-                  desc: "Posts, blogs y newsletters creados automáticamente manteniendo la voz de tu marca.",
-                  level: "Impacto Rápido"
+                  title: "Asistente IA 24/7",
+                  desc: "Un agente inteligente responde preguntas, agenda citas y califica clientes a cualquier hora del día — por WhatsApp, web o redes sociales.",
+                  level: "Sin descanso"
                 },
                 {
                   icon: PhoneCall,
-                  title: "Chatbot de Ventas 24/7",
-                  desc: "Atención automática en WhatsApp y web. Responde dudas, agenda citas y califica prospectos al instante.",
-                  level: "Medio Impacto"
+                  title: "Análisis de Datos e Inteligencia de Mercado",
+                  desc: "Descubre dónde están tus mejores oportunidades de venta con modelos de IA que analizan tu historial, tu industria y tus competidores.",
+                  level: "Decisiones inteligentes"
                 },
                 {
                   icon: TrendingUp,
-                  title: "Lead Scoring Inteligente",
-                  desc: "Clasificación automática en tu CRM. Tu equipo atiende primero a quienes tienen mayor probabilidad de compra.",
-                  level: "Medio Impacto"
+                  title: "CRM Inteligente",
+                  desc: "Centraliza todos tus prospectos y clientes. El sistema organiza el pipeline, recuerda seguimientos y detecta clientes en riesgo de abandono.",
+                  level: "Todo organizado"
                 },
                 {
                   icon: MessageSquare,
-                  title: "Seguimiento Automático",
-                  desc: "Mensajes post-venta y nurturing hiper-personalizados para no dejar enfriar ninguna oportunidad.",
-                  level: "Alto Impacto"
+                  title: "IA conectada a WhatsApp",
+                  desc: "Conecta tu WhatsApp Business a un sistema de IA que atiende, perfila y canaliza a los prospectos correctos con tus asesores en segundos.",
+                  level: "Respuesta inmediata"
                 },
                 {
                   icon: BarChart3,
-                  title: "Dashboards Narrativos",
-                  desc: "Reportes claros en lenguaje natural. No más hojas de cálculo confusas, la IA te dice exactamente qué pasa.",
-                  level: "Alto Impacto"
+                  title: "Automatización de Seguimientos",
+                  desc: "Secuencias automáticas de mensajes, correos y recordatorios que mantienen activo el interés del cliente sin que nadie lo haga manualmente.",
+                  level: "Cero tareas manuales"
                 },
                 {
                   icon: Zap,
-                  title: "Automatización de Procesos",
-                  desc: "Cotizaciones, reportes y flujos internos conectados para eliminar el trabajo manual repetitivo.",
-                  level: "Transformación"
+                  title: "Perfilamiento para Asesores",
+                  desc: "La IA recopila toda la información relevante del prospecto antes de que tu asesor lo llame. Más contexto, más confianza, más cierres.",
+                  level: "Asesores potenciados"
                 },
                 {
                   icon: BrainCircuit,
-                  title: "CRM Personalizado",
-                  desc: "Un sistema completo con predicciones, sugerencias de venta y organización inteligente de toda tu empresa.",
-                  level: "Transformación"
+                  title: "Integraciones a Medida",
+                  desc: "Conectamos la IA con tus sistemas actuales: ERP, ecommerce, plataformas de marketing, redes sociales y más para un ecosistema inteligente.",
+                  level: "Todo conectado"
                 }
               ].map((service, index) => (
                 <motion.div 
